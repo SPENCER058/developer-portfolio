@@ -31,11 +31,15 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
-.env
+.env*
+
 .env.local
 .env.development
 .env.preview
 .env.production
+
+# except env example files
+!.env.example
 
 # vercel
 .vercel
@@ -44,6 +48,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-#sitemap and robots
+# sitemap and robots
 /public/sitemap.xml
 /public/robots.txt

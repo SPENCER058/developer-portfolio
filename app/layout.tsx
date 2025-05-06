@@ -55,6 +55,7 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
+  weight: ['400', '500', '600'],
 });
 
 const poppins = Poppins({
@@ -76,7 +77,7 @@ export default function RootLayout({
       >
         <Navbar />
 
-        <main className="px-32 gap-4 ">
+        <main className="px-32">
           {children}
         </main>
 

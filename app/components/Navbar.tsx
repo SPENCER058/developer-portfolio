@@ -6,20 +6,22 @@ import { useEffect, useState } from "react";
 
 export function Navbar() {
 
-    const [isScrolled, setIsScrolled] = useState(false);
+    const [isAtTop, setIsAtTop] = useState(true);
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 10);
+            setIsAtTop(window.scrollY <= 10);
         };
 
+        handleScroll();
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+
     return (
         <>
-            <header className={`sticky top-0 z-50 transition-all duration-700 ease-in-out ${isScrolled ? " fixed bg-(--background)" : "sticky bg-transparent"}`}>
+            <header className={`sticky top-0 z-50 transition-all duration-700 ease-in-out ${isAtTop ? "bg-transparent" : "bg-[var(--background)]"}`}>
                 <nav className={`top-0 z-50 w-full py-4 transition-colors`}>
                     <div className="flex justify-between items-center fex-col px-32">
                         <div className="transition ease-in-out duration-700 hover:scale-110 will-change-transform">

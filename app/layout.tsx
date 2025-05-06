@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | AwesomeNeko",
   },
 
-  description: "Welcome to AwesomeNeko",
+  description: "Galih Panji Portfolio Website",
   keywords: ["galih-panji-hanindito", "portfolio", "game-developer", "website"],
   authors: [{ name: "Galih Panji Hanindito" }],
   generator: "Next.js",
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   publisher: "Galih Panji Hanindito",
 
   openGraph: {
-    title: "OG Title",
-    description: "OG Description",
-    url: "https://yourdomain.com/page",
+    title: "AwesomeNeko",
+    description: "Galih Panji Portfolio Website",
+    url: "https://awesomeneko.vercel.app",
     siteName: "AwesomeNeko",
     images: [
       {

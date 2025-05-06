@@ -10,7 +10,7 @@ export function Header() {
             <div className="flex flex-row justify-between">
                 <div className="flex flex-col gap-10">
                     <div>
-                        <p className="text-[#B4B4B4] --font-poppins font-bold text-3xl px-1">HELLO I'M</p>
+                        <p className="text-[#B4B4B4] --font-poppins font-bold text-3xl px-1">HELLO I&apos;M</p>
                         <h2 className="--font-poppins font-bold text-8xl bg-gradient-to-r from-[#69B4F6] to-[#3B46E0] text-transparent bg-clip-text">
                             GALIH
                         </h2>
@@ -19,7 +19,7 @@ export function Header() {
                     <div className="flex flex-col gap-2 px-1">
                         <p className="text-md font-medium --font-inter text-[#FFFFFF]">from pixel to polygon, from code to reality.</p>
                         <div className="flex flex-row items-center gap-2.5">
-                            <p className="text-md font-medium --font-inter text-[#FFFFFF]">I'm a</p>
+                            <p className="text-md font-medium --font-inter text-[#FFFFFF]">I&apos;m a</p>
                             <p className="font-bold --font-inter text-2xl bg-gradient-to-r text-transparent bg-clip-text from-[#69B4F6] to-[#4B6DE7]">Game Developer</p>
                         </div>
                     </div>

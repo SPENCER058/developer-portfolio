@@ -1,6 +1,6 @@
 "use client"
 
-// import Image from "next/image";
+// import Image from "next/image"; 
 import { ActionButton } from "./Button";
 import { FaGraduationCap } from "react-icons/fa6";
 import { MdArrowOutward } from "react-icons/md";

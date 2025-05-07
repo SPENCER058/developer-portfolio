@@ -9,8 +9,6 @@ import { ActionButton } from "./Button";
 const roles = ['Unity Game Developer', 'Next.js Web Developer', 'ASP.NET Web Developer'];
 
 export function HeaderCard() {
-
-
     const [index, setIndex] = useState(0);
 
     useEffect(() => {

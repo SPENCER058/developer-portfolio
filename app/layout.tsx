@@ -4,6 +4,7 @@ import "./globals.css";
 
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
+import { GlowCircle } from "./components/GlowCircle";
 
 export const metadata: Metadata = {
   title: {
@@ -76,7 +77,24 @@ export default function RootLayout({
         className={`${inter.variable} ${poppins.variable} antialiased overflow-x-hidden`}
       >
         <Navbar />
-
+        <div className="absolute inset-0 pointer-events-none z-0">
+          <GlowCircle
+            size={700}
+            color="bg-(--color-glow-primary)"
+            opacity="opacity-35"
+            position="bottom-[10px] right-[1000px]"
+            blur="blur-[150px]"
+          />
+          <div className="overflow-x-hidden">
+            <GlowCircle
+              size={700}
+              color="bg-(--color-glow-secondary)"
+              opacity="opacity-27"
+              position="bottom-[-300px] left-[1100px]"
+              blur="blur-[150px]"
+            />
+          </div>
+        </div>
         <main className="px-32">
           {children}
         </main>

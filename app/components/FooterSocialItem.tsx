@@ -16,7 +16,7 @@ export function NavSocialItem({ href, icon, size }: NavSocialItemProps) {
     return (
         <>
             <Link className="--font-inter text-base transition ease-in-out duration-700 hover:scale-130 will-change-transform"
-                href={href}
+                href={href} target="_blank"
             >
                 <IconComponent size={size || 20} />
             </Link>

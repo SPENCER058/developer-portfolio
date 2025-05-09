@@ -1,50 +1,99 @@
 "use client"
 
+import { TbZoom } from "react-icons/tb";
+import { ActionButton } from "./Button";
+import InnerBorderGrid from "./InnerBorderGrid"
+import { ProjectCard } from "./ProjectCard";
+
 export function PortfolioCard() {
     return (
         <>
             <div>
-                <h1 className="text-2xl font-bold --font-poppins text-center">LATEST PROJECTS</h1>
-                <div className="grid grid-cols-3 gap-10 ">
-                    <div className="bg-white p-6 rounded-2xl">
-                        <div className="bg-gray-500 min-h-52 w-full">
-                        </div>
-                        <h1 className="text-black">Title</h1>
-                        <p className="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, non repellat. Adipisci hic suscipit dignissimos voluptatibus natus excepturi ut deleniti alias eius? Exercitationem maiores quisquam commodi illum ullam aliquid placeat qui architecto!</p>
-                    </div>
-                    <div className="bg-white p-4">
-                        <div className="bg-gray-500 h-[100] w-[100]">
-                        </div>
-                        <h1 className="text-black">Title</h1>
-                        <p className="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, non repellat. Adipisci hic suscipit dignissimos voluptatibus natus excepturi ut deleniti alias eius? Exercitationem maiores quisquam commodi illum ullam aliquid placeat qui architecto!</p>
-                    </div>
-                    <div className="bg-white p-4">
-                        <div className="bg-gray-500 h-[100] w-[100]">
-                        </div>
-                        <h1 className="text-black">Title</h1>
-                        <p className="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, non repellat. Adipisci hic suscipit dignissimos voluptatibus natus excepturi ut deleniti alias eius? Exercitationem maiores quisquam commodi illum ullam aliquid placeat qui architecto!</p>
-                    </div>
-                    <div className="bg-white p-4">
-                        <div className="bg-gray-500 h-[100] w-[100]">
-                        </div>
-                        <h1 className="text-black">Title</h1>
-                        <p className="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, non repellat. Adipisci hic suscipit dignissimos voluptatibus natus excepturi ut deleniti alias eius? Exercitationem maiores quisquam commodi illum ullam aliquid placeat qui architecto!</p>
-                    </div>
-                    <div className="bg-white p-4">
-                        <div className="bg-gray-500 h-[100] w-[100]">
-                        </div>
-                        <h1 className="text-black">Title</h1>
-                        <p className="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, non repellat. Adipisci hic suscipit dignissimos voluptatibus natus excepturi ut deleniti alias eius? Exercitationem maiores quisquam commodi illum ullam aliquid placeat qui architecto!</p>
-                    </div>
-                    <div className="bg-white p-4">
-                        <div className="bg-gray-500 h-[100] w-[100]">
-                        </div>
-                        <h1 className="text-black">Title</h1>
-                        <p className="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, non repellat. Adipisci hic suscipit dignissimos voluptatibus natus excepturi ut deleniti alias eius? Exercitationem maiores quisquam commodi illum ullam aliquid placeat qui architecto!</p>
-                    </div>
+                <h1 className="text-2xl font-bold --font-poppins text-center pb-12">LATEST PROJECTS</h1>
+
+                <InnerBorderGrid borderColor="border-[#3B46E0]/50">
+                    <ProjectCard
+                        title="SARANA KAI DAOP 6"
+                        type="Web App"
+                        date="May 2025"
+                        tags={[
+                            { variant: 'nextjs' },
+                            { variant: 'tailwind' },
+                            { variant: 'typescript' },
+                        ]}
+                        description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia veniam amet omnis fugit asperiores sit tempore?"
+                    />
+                    <ProjectCard
+                        title="SIMBA AR"
+                        type="Augmented Reality"
+                        date="July 2024"
+                        tags={[
+                            { variant: 'nextjs' },
+                            { variant: 'tailwind' },
+                            { variant: 'typescript' },
+                        ]}
+                        description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia veniam amet omnis fugit asperiores sit tempore?"
+                    />
+                    <ProjectCard
+                        title="SUPER CLEANER"
+                        type="Video Game"
+                        date="December 2023"
+                        tags={[
+                            { variant: 'nextjs' },
+                            { variant: 'tailwind' },
+                            { variant: 'typescript' },
+                        ]}
+                        description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia veniam amet omnis fugit asperiores sit tempore?"
+                    />
+                    <ProjectCard
+                        title="PINBALL"
+                        type="Video Game"
+                        date="August 2023"
+                        tags={[
+                            { variant: 'nextjs' },
+                            { variant: 'tailwind' },
+                            { variant: 'typescript' },
+                        ]}
+                        description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia veniam amet omnis fugit asperiores sit tempore?"
+                    />
+                    <ProjectCard
+                        title="CROSSYROAD"
+                        type="Video Game"
+                        date="April 2023"
+                        tags={[
+                            { variant: 'nextjs' },
+                            { variant: 'tailwind' },
+                            { variant: 'typescript' },
+                        ]}
+                        description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia veniam amet omnis fugit asperiores sit tempore?"
+                    />
+                    <ProjectCard
+                        title="LABYRINT"
+                        type="Video Game"
+                        date="March 2023"
+                        tags={[
+                            { variant: 'nextjs' },
+                            { variant: 'tailwind' },
+                            { variant: 'typescript' },
+                        ]}
+                        description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia veniam amet omnis fugit asperiores sit tempore?"
+                    />
+                </InnerBorderGrid>
+
+
+                <div className="grid grid-cols-3 gap-10 pt-10 ">
+
                 </div >
                 <div className="flex justify-center">
-                    <div className="border-2 rounded-full w-fit">See More</div>
+                    <ActionButton
+                        href="/"
+                        label="See More"
+                        bgColor="bg-[#04042D]"
+                        borderColor="border-[#3B46E0]"
+                        hoverBgColor="hover:bg-[#3B46E0]"
+                        additionalClass="px-8 justify-center"
+                        icon={TbZoom}
+                    />
                 </div>
             </div>
         </>

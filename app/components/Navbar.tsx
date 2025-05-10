@@ -1,12 +1,13 @@
-"use client"
+"use client";
 
-import { FaGlobe } from "react-icons/fa6";
+import { FaGlobe, FaBars } from "react-icons/fa6";
 import { NavbarChild } from "./NavbarChild";
 import { useEffect, useState } from "react";
+import { FaTimes } from "react-icons/fa";
 
 export function Navbar() {
-
     const [isAtTop, setIsAtTop] = useState(true);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -18,33 +19,58 @@ export function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const toggleMenu = () => setMenuOpen(!menuOpen);
 
     return (
-        <>
-            <header className={`sticky top-0 z-50 transition-all duration-700 ease-in-out ${isAtTop ? "bg-transparent" : "bg-[var(--background)]"}`}>
-                <nav className={`top-0 z-50 w-full py-4 transition-colors`}>
-                    <div className="flex justify-between items-center fex-col px-32">
-                        <div className="transition ease-in-out duration-700 hover:scale-110 will-change-transform">
-                            <h1 className="font-poppins font-bold text-lg">AWESOMENEKO.</h1>
-                        </div>
+        <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 ease-in-out ${isAtTop ? "bg-transparent" : "bg-[var(--background)]"}`}>
+            <nav className="w-full py-4 px-4 sm:px-6 md:px-12 lg:px-32">
+                <div className="flex justify-between items-center">
+                    {/* Logo */}
+                    <div className="transition duration-700 hover:scale-110 will-change-transform">
+                        <h1 className="font-poppins font-bold text-lg">AWESOMENEKO.</h1>
+                    </div>
 
-                        <div className="flex justify-center w-full gap-3">
-                            <NavbarChild key={"home"} name={"home"} href={"/"} />
-                            <NavbarChild key={"about"} name={"about me"} href={"/about"} />
-                            <NavbarChild key={"projects"} name={"projects"} href={"/projects"} />
-                            <NavbarChild key={"certifications"} name={"certifications"} href={"/certifications"} />
-                            <NavbarChild key={"skills"} name={"skills"} href={"/skills"} />
-                            <NavbarChild key={"contact"} name={"contact"} href={"/contact"} />
-                        </div>
-                        <div className="flex flex-row gap-2 justify-center items-center 
-                        transition duration-700 ease-in-out hover:translate-y-[-5px]"
-                        >
+                    {/* Tablet + Desktop Menu */}
+                    <div className="hidden sm:flex justify-center gap-3">
+                        <NavbarChild name="home" href="/" />
+                        <NavbarChild name="about me" href="/about" />
+                        <NavbarChild name="projects" href="/projects" />
+                        <NavbarChild name="certifications" href="/certifications" />
+                        <NavbarChild name="skills" href="/skills" />
+                        <NavbarChild name="contact" href="/contact" />
+                    </div>
+
+                    {/* Language Selector */}
+                    <div className="hidden sm:flex flex-row gap-2 justify-center items-center transition duration-700 ease-in-out hover:translate-y-[-5px]">
+                        <FaGlobe />
+                        <h6>EN</h6>
+                    </div>
+
+                    {/* Hamburger Button */}
+                    <div className="sm:hidden">
+                        <button onClick={toggleMenu} aria-label="Toggle menu">
+                            {menuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
+                        </button>
+                    </div>
+                </div>
+
+                {/* Mobile Menu Overlay */}
+                {menuOpen && (
+                    <div className="absolute top-full left-0 w-full bg-[var(--background)] shadow-md flex flex-col items-center py-4 gap-2 z-40">
+                        <NavbarChild name="home" href="/" />
+                        <NavbarChild name="about me" href="/about" />
+                        <NavbarChild name="projects" href="/projects" />
+                        <NavbarChild name="certifications" href="/certifications" />
+                        <NavbarChild name="skills" href="/skills" />
+                        <NavbarChild name="contact" href="/contact" />
+
+                        <div className="flex flex-row gap-2 justify-center items-center mt-2">
                             <FaGlobe />
                             <h6>EN</h6>
                         </div>
                     </div>
-                </nav>
-            </header >
-        </>
+                )}
+            </nav>
+        </header>
     );
 }

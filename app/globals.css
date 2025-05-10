@@ -16,6 +16,10 @@
 
   --font-inter: var(--font-inter);
   --font-poppins: var(--font-poppins);
+
+  --border-color: #3B46E0;
+  --component-bg: #04042D;
+
 }
 
 

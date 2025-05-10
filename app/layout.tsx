@@ -5,6 +5,7 @@ import "./globals.css";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { GlowCircle } from "./components/GlowCircle";
+import GoToTop from "./components/ui/GoToTop";
 
 export const metadata: Metadata = {
   title: {
@@ -74,7 +75,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${poppins.variable} antialiased overflow-x-hidden`}
+        className={`${inter.variable} ${poppins.variable} antialiased overflow-x-clip`}
       >
         <Navbar />
         <div className="absolute inset-0 pointer-events-none z-0">
@@ -95,8 +96,9 @@ export default function RootLayout({
             />
           </div>
         </div>
-        <main className="px-32">
+        <main className="px-4 pt-6 sm:px-6 md:px-12 lg:px-24 xl:px-32 lg:pt-10">
           {children}
+          <GoToTop />
         </main>
 
         <Footer />

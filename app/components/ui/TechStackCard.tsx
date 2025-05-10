@@ -17,39 +17,39 @@ export function TechStackCard() {
                 <div className="flex flex-col gap-3">
 
                     <TechStackBar backgroundClass="border-[#3B46E0] bg-[#04042D] border-2">
-                        <TechStackItem label="Unity" icon={FaUnity} />
-                        <TechStackItem label="Rider" icon={SiRider} />
-                        <TechStackItem label="Visual Studio" icon={DiVisualstudio} />
-                        <TechStackItem label="Visual Studio Code" icon={VscVscode} />
+                        <TechStackItem label="Unity" link="https://unity.com/" icon={FaUnity} />
+                        <TechStackItem label="Rider" link="https://www.jetbrains.com/rider/" icon={SiRider} />
+                        <TechStackItem label="Visual Studio" link="https://visualstudio.microsoft.com/" icon={DiVisualstudio} />
+                        <TechStackItem label="Visual Studio Code" link="https://code.visualstudio.com/" icon={VscVscode} />
                     </TechStackBar>
 
                     <TechStackBar backgroundClass="border-[#3B46E0] bg-[#04042D] border-2">
-                        <TechStackItem label="Laravel" icon={FaLaravel} />
-                        <TechStackItem label="React" icon={FaReact} />
-                        <TechStackItem label="Next.js" icon={SiNextdotjs} />
-                        <TechStackItem label="Node.js" icon={FaNodeJs} />
-                        <TechStackItem label="Tailwind" icon={SiTailwindcss} />
-                        <TechStackItem icon={SiDotnet} size={32} />
-                        <TechStackItem label="MySQL" icon={GrMysql} />
-                        <TechStackItem label="Postgre" icon={SiPostgresql} />
-                        <TechStackItem label="SQLite" icon={SiSqlite} />
+                        <TechStackItem label="Laravel" link="https://laravel.com/" icon={FaLaravel} />
+                        <TechStackItem label="React" link="https://react.dev/" icon={FaReact} />
+                        <TechStackItem label="Next.js" link="https://nextjs.org/" icon={SiNextdotjs} />
+                        <TechStackItem label="Node.js" link="https://nodejs.org/en" icon={FaNodeJs} />
+                        <TechStackItem label="Tailwind" link="https://tailwindcss.com/" icon={SiTailwindcss} />
+                        <TechStackItem icon={SiDotnet} link="https://dotnet.microsoft.com/" size={32} />
+                        <TechStackItem label="MySQL" link="https://www.mysql.com/" icon={GrMysql} />
+                        <TechStackItem label="Postgre" link="https://www.postgresql.org/" icon={SiPostgresql} />
+                        <TechStackItem label="SQLite" link="https://www.sqlite.org/" icon={SiSqlite} />
                     </TechStackBar>
 
                     <TechStackBar backgroundClass="border-[#3B46E0] bg-[#04042D] border-2">
-                        <TechStackItem label="Github" icon={FaGithub} />
-                        <TechStackItem label="Gitlab" icon={FaGitlab} />
-                        <TechStackItem label="SourceTree" icon={FaSourcetree} />
-                        <TechStackItem label="ClickUp" icon={SiClickup} />
-                        <TechStackItem label="Trello" icon={FaTrello} />
-                        <TechStackItem label="Notion" icon={RiNotionFill} />
+                        <TechStackItem label="Github" link="https://github.com/" icon={FaGithub} />
+                        <TechStackItem label="Gitlab" link="https://about.gitlab.com/" icon={FaGitlab} />
+                        <TechStackItem label="SourceTree" link="https://www.sourcetreeapp.com/" icon={FaSourcetree} />
+                        <TechStackItem label="ClickUp" link="https://clickup.com/" icon={SiClickup} />
+                        <TechStackItem label="Trello" link="https://trello.com/" icon={FaTrello} />
+                        <TechStackItem label="Notion" link="https://www.notion.com/" icon={RiNotionFill} />
                     </TechStackBar>
 
                     <TechStackBar backgroundClass="border-[#3B46E0] bg-[#04042D] border-2">
-                        <TechStackItem label="Blender" icon={SiBlender} />
-                        <TechStackItem label="Figma" icon={FaFigma} />
-                        <TechStackItem label="Photoshop" icon={DiPhotoshop} />
-                        <TechStackItem label="Illustrator" icon={DiIllustrator} />
-                        <TechStackItem label="Davinci" icon={SiDavinciresolve} />
+                        <TechStackItem label="Blender" link="https://www.blender.org/" icon={SiBlender} />
+                        <TechStackItem label="Figma" link="https://www.figma.com/" icon={FaFigma} />
+                        <TechStackItem label="Photoshop" link="https://www.adobe.com/products/photoshop.html" icon={DiPhotoshop} />
+                        <TechStackItem label="Illustrator" link="https://www.adobe.com/products/illustrator.html" icon={DiIllustrator} />
+                        <TechStackItem label="Davinci" link="https://www.blackmagicdesign.com/products/davinciresolve" icon={SiDavinciresolve} />
                     </TechStackBar>
 
                 </div>

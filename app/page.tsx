@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <div className="relative w-full bg-transparent">
-        <div className="flex flex-col gap-40 py-16">
+        <div className="flex flex-col gap-30 py-20">
           <HeaderCard />
           <AboutMeCard />
           <PortfolioCard />

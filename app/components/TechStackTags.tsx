@@ -18,14 +18,16 @@ type TechStackTagProps = {
 };
 
 export function TechStackTag({ variant }: TechStackTagProps) {
-    const base = 'text-xs rounded-full border-2 w-fit px-4 py-1 will-change-transform';
+    const base = 'text-xs rounded-full border-2 w-fit px-2.5 py-0.5 will-change-transform';
     const tag = tagMap[variant];
 
-    if (!tag) return null; // Optional: handle unknown variant safely
+    if (!tag) return null;
 
     return (
         <div className={`${base} ${tag.className}`}>
-            {tag.label}
+            <span className='leading-none'>
+                {tag.label}
+            </span>
         </div>
     );
 }

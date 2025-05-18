@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image";
 // import Image from "next/image"; 
 import { ActionButton } from "./Button";
 import { FaGraduationCap } from "react-icons/fa6";
@@ -9,16 +10,37 @@ import { TbBinaryTree } from "react-icons/tb";
 export function AboutMeCard() {
     return (
         <>
-            <div className="flex flex-row gap-16 items-start">
-                <div>
-                    <div className="bg-gray-500 w-xl h-[500px]">
-                        {/* <Image src={"/"} /> */}
-                    </div>
+            <section id="aboutme" className="flex flex-col w-full md:flex-row gap-8 lg:gap-16 items-start scroll-mt-50">
+                <div className="relative hidden md:block w-fit md:min-w-md h-[350px] border-b-2 border-[#3B46E0]">
+                    <Image
+                        src="/assets/images/formal_pict.png"
+                        alt="Formal Picture"
+                        fill
+                        className="object-contain"
+                    />
                 </div>
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-6 w-full">
                     <h1 className="pb-4 border-b-2 border-[#3B46E0] text-2xl font-bold --font-poppins">ABOUT ME</h1>
-                    <p className="text-justify --font-inter px-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis quia nihil iure voluptatem architecto neque sunt ullam optio explicabo est tempore et quae, fugit, recusandae repudiandae a adipisci distinctio sed soluta maxime. Similique quo enim et molestiae repellendus rerum possimus deserunt ut ipsam? Cupiditate architecto vero hic obcaecati iste? Molestiae maxime porro magni temporibus libero architecto velit cumque quod. Commodi, facilis esse harum asperiores doloremque iusto magnam officiis libero eaque excepturi ab tempore debitis fugit in mollitia ea minima repudiandae dolore quaerat, architecto repellat, molestias accusantium. Similique quis earum quos exercitationem reiciendis aliquam temporibus, blanditiis incidunt corrupti, itaque autem aspernatur.</p>
-                    <div className="flex flex-row gap-4">
+                    <p className="text-justify --font-inter px-1">
+                        {`
+                        Hi, I'm Galih Panji Hanindito. I am a fresh graduate student of Informatics Engineering, from Sebelas Maret University of Surakarta.
+                        `}
+                    </p>
+                    <p className="text-justify --font-inter px-1">
+                        {`
+                        Since young age, I already take interest in computer, and at high school I start focusing in Game Development. I create several simple games for practice, and also a start line to build my future in Game Development Industry. But basically I love programming or doing work in front of computer, so I also love to learn 3D, Art, or other development like software, website, or mobile.
+                        `}
+                    </p>
+                    <p className="text-justify --font-inter px-1">
+                        {`
+                        In the end its nice to meet you, hope we can collaborate futher.
+                        `}
+                    </p>
+
+                    <div className="hidden ">
+                        <div className="flex flex-row gap-4 flex-wrap">
+
+                        </div>
                         <ActionButton
                             href="/"
                             label="My education"
@@ -49,7 +71,7 @@ export function AboutMeCard() {
                     </div>
 
                 </div>
-            </div>
+            </section>
         </>
     );
 }

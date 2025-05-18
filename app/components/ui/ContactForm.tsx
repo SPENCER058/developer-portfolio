@@ -3,8 +3,39 @@
 import { useState } from "react";
 import { FaEnvelope, FaPaperPlane, FaWhatsapp } from "react-icons/fa6";
 
+const sendWhatsapp = (name: string, message: string) => {
+    const phoneNumber = "6283866621299"; // replace with your number
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(`Hello, my name is ${name}. ${message}`)}`;
+    window.open(url, "_blank");
+};
+
+
 export function ContactForm() {
     const [method, setMethod] = useState('whatsapp');
+
+    const [form, setForm] = useState({ name: '', email: '', message: '' });
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+
+        if (method === 'whatsapp') {
+            sendWhatsapp(form.name, form.message);
+        } else {
+            const res = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(form),
+            });
+
+            const data = await res.json();
+            if (data.success) {
+                alert("Email sent!");
+            } else {
+                alert("Failed to send email: " + data.error);
+            }
+        }
+    };
+
 
     return (
         <>
@@ -15,16 +46,20 @@ export function ContactForm() {
                         onClick={() => setMethod('whatsapp')}
                         className={`flex-1 py-2 px-4 rounded-l-full ${method === 'whatsapp' ? 'bg-[#3B46E0] text-white' : 'bg-zinc-800 text-white'}`}
                     >
-                        <FaWhatsapp size={20} className="inline-block mr-2" /> WhatsApp
+                        <div className="flex h-full justify-center items-center">
+                            <FaWhatsapp size={20} className="hidden md:inline-block mr-2" /> WhatsApp
+                        </div>
                     </button>
                     <button
                         onClick={() => setMethod('email')}
                         className={`flex-1 py-2 px-4 rounded-r-full ${method === 'email' ? 'bg-[#3B46E0] text-white' : 'bg-zinc-800 text-white'}`}
                     >
-                        <FaEnvelope className="inline-block mr-2" /> Email
+                        <div className="flex h-full justify-center items-center">
+                            <FaEnvelope className="hidden md:inline-block mr-2" /> Email
+                        </div>
                     </button>
                 </div>
-                <form className="flex flex-col gap-8 items-center">
+                <form onSubmit={handleSubmit} className="flex flex-col gap-8 items-center">
                     <div className="flex flex-col w-full p-2 gap-2">
                         <div className="flex flex-col w-full gap-2">
                             <h1 className="text-[var(--font-inter)] text-base">
@@ -34,6 +69,8 @@ export function ContactForm() {
                                 type="text"
                                 placeholder="Your Full Name"
                                 className="w-full px-4 py-2 bg-zinc-800 text-white rounded"
+                                value={form.name}
+                                onChange={(e) => setForm({ ...form, name: e.target.value })}
                             />
                         </div>
                         {method === 'email' && (
@@ -45,6 +82,8 @@ export function ContactForm() {
                                     type="email"
                                     placeholder="youremail@gmail.com"
                                     className="w-full px-4 py-2 bg-zinc-800 text-white rounded"
+                                    value={form.email}
+                                    onChange={(e) => setForm({ ...form, email: e.target.value })}
                                 />
                             </div>
                         )}
@@ -56,6 +95,8 @@ export function ContactForm() {
                                 placeholder="Your message..."
                                 rows={4}
                                 className="w-full px-4 py-2 bg-zinc-800 text-white rounded"
+                                value={form.message}
+                                onChange={(e) => setForm({ ...form, message: e.target.value })}
                             />
                         </div>
                     </div>

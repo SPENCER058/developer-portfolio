@@ -7,8 +7,8 @@ export function ContactSocialMedia() {
     return (
         <>
             <div className="bg-gradient-to-r from-[#5054C6] to-[#AAD9D9]/85 flex flex-col gap-4 w-full p-4 rounded-2xl">
-                <h3 className="text-xl font-semibold mb-2 --font-poppins text-center">Follow Me On</h3>
-                <div className="flex flex-row justify-center gap-8 pb-4">
+                <h3 className="text-xl font-semibold md:mb-2 --font-poppins text-center">Follow Me On</h3>
+                <div className="flex flex-row justify-center gap-8 pb-2 md:pb-4">
                     <a className="text-white will-change-transform hover: transition duration-700 ease-in-out hover:translate-y-[-5px]" href="https://www.linkedin.com/in/galihpanjidev/">
                         <FaLinkedin size={30} />
                     </a>

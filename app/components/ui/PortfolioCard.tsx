@@ -2,16 +2,15 @@
 
 import { TbZoom } from "react-icons/tb";
 import { ActionButton } from "./Button";
-import InnerBorderGrid from "./InnerBorderGrid"
 import { ProjectCard } from "./ProjectCard";
 
 export function PortfolioCard() {
     return (
         <>
             <div>
-                <h1 className="text-2xl font-bold --font-poppins text-center pb-12">LATEST PROJECTS</h1>
+                <h1 className="text-2xl font-bold --font-poppins text-center pb-8">PROJECTS</h1>
 
-                <InnerBorderGrid borderColor="border-[#3B46E0]/50">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <ProjectCard
                         title="SARANA KAI DAOP 6"
                         type="Web App"
@@ -78,7 +77,7 @@ export function PortfolioCard() {
                         ]}
                         description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia veniam amet omnis fugit asperiores sit tempore?"
                     />
-                </InnerBorderGrid>
+                </div>
 
 
                 <div className="grid grid-cols-3 gap-10 pt-10 ">
@@ -86,7 +85,7 @@ export function PortfolioCard() {
                 </div >
                 <div className="flex justify-center">
                     <ActionButton
-                        href="/"
+                        href="/projects"
                         label="See More"
                         bgColor="bg-[#04042D]"
                         borderColor="border-[#3B46E0]"

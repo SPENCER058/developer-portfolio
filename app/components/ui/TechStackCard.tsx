@@ -12,7 +12,7 @@ import { GrMysql } from "react-icons/gr";
 export function TechStackCard() {
     return (
         <>
-            <div className="flex flex-col gap-8">
+            <section id="techstacks" className="flex flex-col gap-8 scroll-mt-35">
                 <h1 className="text-center text-2xl font-bold --font-poppins">TECH STACK</h1>
                 <div className="flex flex-col gap-3">
 
@@ -20,7 +20,7 @@ export function TechStackCard() {
                         <TechStackItem label="Unity" link="https://unity.com/" icon={FaUnity} />
                         <TechStackItem label="Rider" link="https://www.jetbrains.com/rider/" icon={SiRider} />
                         <TechStackItem label="Visual Studio" link="https://visualstudio.microsoft.com/" icon={DiVisualstudio} />
-                        <TechStackItem label="Visual Studio Code" link="https://code.visualstudio.com/" icon={VscVscode} />
+                        <TechStackItem label="VS Code" link="https://code.visualstudio.com/" icon={VscVscode} />
                     </TechStackBar>
 
                     <TechStackBar backgroundClass="border-[#3B46E0] bg-[#04042D] border-2">
@@ -53,7 +53,7 @@ export function TechStackCard() {
                     </TechStackBar>
 
                 </div>
-            </div>
+            </section>
         </>
     );
 }

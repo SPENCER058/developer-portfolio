@@ -4,6 +4,7 @@ import { FaGlobe, FaBars } from "react-icons/fa6";
 import { NavbarChild } from "./NavbarChild";
 import { useEffect, useState } from "react";
 import { FaTimes } from "react-icons/fa";
+import Link from "next/link";
 
 export function Navbar() {
     const [isAtTop, setIsAtTop] = useState(true);
@@ -22,22 +23,23 @@ export function Navbar() {
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
     return (
-        <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 ease-in-out ${isAtTop ? "bg-transparent" : "bg-[var(--background)]"}`}>
+        <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 ease-in-out 
+            ${isAtTop ? "bg-transparent" : "bg-[var(--background)]"}
+        `}>
             <nav className="w-full py-4 px-4 sm:px-6 md:px-12 lg:px-32">
                 <div className="flex justify-between items-center">
                     {/* Logo */}
                     <div className="transition duration-700 hover:scale-110 will-change-transform">
-                        <h1 className="font-poppins font-bold text-lg">AWESOMENEKO.</h1>
+                        <Link href={"/"} className="font-poppins font-bold text-lg">AWESOMENEKO.</Link>
                     </div>
 
                     {/* Tablet + Desktop Menu */}
                     <div className="hidden sm:flex justify-center gap-3">
                         <NavbarChild name="home" href="/" />
-                        <NavbarChild name="about me" href="/about" />
+                        <NavbarChild name="about me" href="/#aboutme" />
                         <NavbarChild name="projects" href="/projects" />
-                        <NavbarChild name="certifications" href="/certifications" />
-                        <NavbarChild name="skills" href="/skills" />
-                        <NavbarChild name="contact" href="/contact" />
+                        <NavbarChild name="tech stacks" href="/#techstacks" />
+                        <NavbarChild name="contact" href="/#contact" />
                     </div>
 
                     {/* Language Selector */}
@@ -58,11 +60,10 @@ export function Navbar() {
                 {menuOpen && (
                     <div className="absolute top-full left-0 w-full bg-[var(--background)] shadow-md flex flex-col items-center py-4 gap-2 z-40">
                         <NavbarChild name="home" href="/" />
-                        <NavbarChild name="about me" href="/about" />
+                        <NavbarChild name="about me" href="/#aboutme" />
                         <NavbarChild name="projects" href="/projects" />
-                        <NavbarChild name="certifications" href="/certifications" />
-                        <NavbarChild name="skills" href="/skills" />
-                        <NavbarChild name="contact" href="/contact" />
+                        <NavbarChild name="tech stacks" href="/#techstacks" />
+                        <NavbarChild name="contact" href="/#contact" />
 
                         <div className="flex flex-row gap-2 justify-center items-center mt-2">
                             <FaGlobe />

@@ -11,9 +11,10 @@ interface ActionButtonProps {
     size?: number;
     additionalClass?: string;
     transitionDuration?: string;
+    target?: string;
 }
 
-export function ActionButton({ href, label, bgColor, borderColor, hoverBgColor, icon, size, transitionDuration, additionalClass, }: ActionButtonProps) {
+export function ActionButton({ href, label, bgColor, borderColor, hoverBgColor, icon, size, transitionDuration, additionalClass, target }: ActionButtonProps) {
     const IconComponent = icon;
 
     return (
@@ -27,6 +28,7 @@ export function ActionButton({ href, label, bgColor, borderColor, hoverBgColor, 
                 ${hoverBgColor}
                 `}
                 href={href}
+                target={target}
             >
                 <p className="--font-poppins font-medium text-md whitespace-nowrap">{label}</p>
                 {IconComponent && <IconComponent size={size || 20} />}

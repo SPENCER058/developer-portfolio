@@ -57,7 +57,7 @@ export function HeaderCard() {
 
                     <div className="flex flex-row gap-3.5 px-1">
                         <ActionButton
-                            href="/"
+                            href="/#contact"
                             label="Contact Me"
                             bgColor="bg-[#3B46E0]"
                             borderColor="border-[#3B46E0]"
@@ -75,7 +75,7 @@ export function HeaderCard() {
                     </div>
 
                 </div>
-                <div className="relative md:min-w-[800px] min-h-96">
+                <div className="relative md:min-w-[700px] min-h-96">
                     <Image
                         src="/assets/images/ForTw.png"
                         alt="Header Picture"

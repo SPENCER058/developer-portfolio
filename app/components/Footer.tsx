@@ -24,19 +24,19 @@ export function Footer() {
                         </h1>
                     </div>
                 </div>
-                <div className="hidden md:flex flex-col gap-4">
+                <div className="hidden md:flex flex-col items-center gap-4">
                     <h1 className="--font-poppins font-semibold text-2xl">
                         Website
                     </h1>
-                    <div className="flex gap-2.5 flex-col">
-                        <NavItem href="/" label="about me" />
-                        <NavItem href="/" label="projects" />
-                        <NavItem href="/" label="certifications" />
-                        <NavItem href="/" label="skills" />
-                        <NavItem href="/" label="contact" />
+                    <div className="flex gap-12 flex-row">
+                        <NavItem label="home" href="/" />
+                        <NavItem label="about me" href="/#aboutme" />
+                        <NavItem label="projects" href="/#projects" />
+                        <NavItem label="tech stacks" href="/#techstacks" />
+                        <NavItem label="contact" href="/#contact" />
                     </div>
                 </div>
-                <div className="hidden md:flex flex-col gap-4">
+                <div className="hidden  flex-col gap-4">
                     <h1 className="--font-poppins font-semibold text-2xl">
                         Projects
                     </h1>

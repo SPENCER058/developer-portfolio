@@ -37,13 +37,13 @@ export function Navbar() {
                     <div className="hidden sm:flex justify-center gap-3">
                         <NavbarChild name="home" href="/" />
                         <NavbarChild name="about me" href="/#aboutme" />
-                        <NavbarChild name="projects" href="/projects" />
+                        <NavbarChild name="projects" href="/#projects" />
                         <NavbarChild name="tech stacks" href="/#techstacks" />
                         <NavbarChild name="contact" href="/#contact" />
                     </div>
 
                     {/* Language Selector */}
-                    <div className="hidden sm:flex flex-row gap-2 justify-center items-center transition duration-700 ease-in-out hover:translate-y-[-5px]">
+                    <div className="hidden sm:hidden flex-row gap-2 justify-center items-center transition duration-700 ease-in-out hover:translate-y-[-5px]">
                         <FaGlobe />
                         <h6>EN</h6>
                     </div>
@@ -61,11 +61,11 @@ export function Navbar() {
                     <div className="absolute top-full left-0 w-full bg-[var(--background)] shadow-md flex flex-col items-center py-4 gap-2 z-40">
                         <NavbarChild name="home" href="/" />
                         <NavbarChild name="about me" href="/#aboutme" />
-                        <NavbarChild name="projects" href="/projects" />
+                        <NavbarChild name="projects" href="/#projects" />
                         <NavbarChild name="tech stacks" href="/#techstacks" />
                         <NavbarChild name="contact" href="/#contact" />
 
-                        <div className="flex flex-row gap-2 justify-center items-center mt-2">
+                        <div className="hidden flex-row gap-2 justify-center items-center mt-2">
                             <FaGlobe />
                             <h6>EN</h6>
                         </div>

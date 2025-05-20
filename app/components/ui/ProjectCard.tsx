@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { TechStackTag, TechVariant } from "../TechStackTags";
+import Image from "next/image";
 
 interface ProjectCardProps {
-    imageSource?: string;
+    imageSource: string;
     title: string;
     type: string;
     date: string;
@@ -13,18 +14,20 @@ interface ProjectCardProps {
     link?: string;
 }
 
-export function ProjectCard({ title, type, date, tags, description, link = "/" }: ProjectCardProps) {
+export function ProjectCard({ title, type, date, tags, description, imageSource, link = "/" }: ProjectCardProps) {
 
     const uppercaseTitle = title.toLocaleUpperCase();
     return (
         <>
-            <Link href={link} className="w-full h-full bg-zinc-900  border-2 border-[#3B46E0]/75 flex flex-col gap-6 py-8 rounded-2xl 
-            transition-transform ease-in-out duration-700 hover:scale-103 ">
-                <div className="bg-gray-500 w-full min-h-52" />
+            <Link href={link} className="w-full h-full bg-zinc-900  border-2 border-[#3B46E0]/75 flex flex-col gap-4 pb-6 rounded-2xl 
+            transition-transform ease-in-out duration-700 hover:scale-103 overflow-hidden">
+                <div className="relative w-full h-52">
+                    <Image src={imageSource} fill alt={"Project image" + title} className="object-fill" />
+                </div>
                 <div className="flex flex-col gap-4 px-6">
-                    <div className="flex flex-col gap-2">
+                    <div className="flex flex-col">
                         <h1 className="font-semibold text-lg will-change-transform overflow-ellipsis">{uppercaseTitle}</h1>
-                        <div className="flex flex-col gap-4 overflow-hidden">
+                        <div className="flex flex-col gap-3 overflow-hidden">
                             <div className="text-medium text-gray-400 will-change-transform">
                                 {type}<span className="mx-1">&middot;</span>{date}
                             </div>
@@ -35,7 +38,7 @@ export function ProjectCard({ title, type, date, tags, description, link = "/" }
                             </div>
                         </div>
                     </div>
-                    <p className="line-clamp-3 --font-inter text-sm text-wrap overflow-ellipsis will-change-transform">
+                    <p className="line-clamp-4 --font-inter text-sm text-wrap overflow-ellipsis will-change-transform text-justify">
                         {description}
                     </p>
                 </div>

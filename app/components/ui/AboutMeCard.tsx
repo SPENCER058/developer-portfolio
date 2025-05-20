@@ -21,17 +21,17 @@ export function AboutMeCard() {
                 </div>
                 <div className="flex flex-col gap-6 w-full">
                     <h1 className="pb-4 border-b-2 border-[#3B46E0] text-2xl font-bold --font-poppins">ABOUT ME</h1>
-                    <p className="text-justify --font-inter px-1">
+                    <p className="text-justify font-normal --font-inter px-1">
                         {`
                         Hi, I'm Galih Panji Hanindito. I am a fresh graduate student of Informatics Engineering, from Sebelas Maret University of Surakarta.
                         `}
                     </p>
-                    <p className="text-justify --font-inter px-1">
+                    <p className="text-justify font-normal --font-inter px-1">
                         {`
                         Since young age, I already take interest in computer, and at high school I start focusing in Game Development. I create several simple games for practice, and also a start line to build my future in Game Development Industry. But basically I love programming or doing work in front of computer, so I also love to learn 3D, Art, or other development like software, website, or mobile.
                         `}
                     </p>
-                    <p className="text-justify --font-inter px-1">
+                    <p className="text-justify font-normal --font-inter px-1">
                         {`
                         In the end its nice to meet you, hope we can collaborate futher.
                         `}
